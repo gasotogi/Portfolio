@@ -61,10 +61,12 @@ body{
     transform-style: preserve-3d;
     will-change: transform; 
     transition: transform 0.1s ease-out; 
-    gap: 2rem;
+    gap: 1rem;
     padding: 0 2rem;
     z-index: 1;
-
+p{
+  color: white;
+}
    }
    .text{
     flex-direction: column;
@@ -87,7 +89,7 @@ body{
    }
    
    p{
-         font-size: 1rem;
+         font-size: 1.2rem;
          color: #cdb0e7;
          text-align: justify;
          font-weight: 400;
@@ -116,6 +118,22 @@ body{
      will-change: transform;
 }
 
+.typing-out{
+    overflow: hidden;
+    border-right: .15em solid rgb(255, 0, 242);
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 0;
+    animation: typing 6s forwards;
+    p{
+      color: #6d88f5;
+      font-weight: 600;
+    }
+    
+}
+.containerMaquina{
+display: inline-block;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -150,4 +168,9 @@ body{
   .logo_gif{
     width: 100%;
   }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
